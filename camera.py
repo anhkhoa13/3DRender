@@ -45,23 +45,19 @@ class Camera():
 
         self.camera_yaw(mouse_dx * self.sensitivity)
         self.camera_pitch(mouse_dy * self.sensitivity)
-        
-        
-
+             
     def camera_yaw(self, a):
         rotate = rotate_y(a)
         self.forward = self.forward @ rotate
         self.right = self.right @ rotate
         self.up = self.up @ rotate
-     
+
     def camera_pitch(self, a):
         rotate = rotate_x(a)
         self.forward = self.forward @ rotate
         self.right = self.right @ rotate
         self.up = self.up @ rotate
     
-        
-
     def translate_matrix(self):
         dx, dy, dz, w = self.position
         return np.array([

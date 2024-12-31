@@ -36,7 +36,7 @@ class Object3D:
 
         for vertice in vertices:
             if not np.any((vertice == self.render.WIDTH/2) | (vertice == self.render.HEIGHT/2)):
-                pygame.draw.circle(self.render.screen, pygame.Color('black'), vertice, 6)
+                pygame.draw.circle(self.render.screen, pygame.Color('black'), vertice, 2)
 
 
     def translate(self, pos):
